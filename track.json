@@ -1,9 +1,9 @@
 [
   {
-    "title": "Midnight Memories",
+    "title": "Space Lion",
     "artist": "Seatbels",
-    "file": "tracks/Space_Lion.mp3",
-    "cover": "covers/Space_Lion.png",
+    "file": "Space_Lion.mp3",
+    "cover": "Space_Lion.png",
     "space": "space",
     "accent": "#8fa4ff"
   }
