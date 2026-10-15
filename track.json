@@ -2,8 +2,8 @@
   {
     "title": "Space Lion",
     "artist": "Seatbels",
-    "file": "Space_Lion.mp3",
-    "cover": "Space_Lion.png",
+    "file": "tracks/Space_Lion.mp3",
+    "cover": "covers/Space_Lion.png",
     "space": "space",
     "accent": "#8fa4ff"
   }
