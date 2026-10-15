@@ -1,24 +1,10 @@
 [
   {
     "title": "Midnight Memories",
-    "artist": "Nocturne",
-    "file": "tracks/midnight-memories.mp3",
-    "cover": "covers/midnight-memories.jpg",
-    "space": "city",
+    "artist": "Seatbels",
+    "file": "tracks/Space_Lion.mp3",
+    "cover": "covers/Space_Lion.png",
+    "space": "space",
     "accent": "#8fa4ff"
   },
-  {
-    "title": "Lost in Space",
-    "artist": "FunDreamer",
-    "file": "tracks/lost-in-space.mp3",
-    "cover": "covers/lost-in-space.jpg",
-    "space": "space",
-    "accent": "#a18aff"
-  },
-  {
-    "title": "Between Clouds",
-    "file": "tracks/between-clouds.mp3",
-    "space": "dream",
-    "accent": "#7fd6d0"
-  }
 ]
