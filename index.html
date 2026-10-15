@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <title>Nocturne — музыкальное пространство</title>
-  <meta name="description" content="Nocturne — тихое интерактивное 3D-пространство для прослушивания музыки." />
+  <title>Nocturne — Deep Space</title>
+  <meta name="description" content="Nocturne — тихое интерактивное космическое пространство для прослушивания музыки." />
   <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
@@ -16,7 +16,7 @@
         <span class="intro__dot"></span>
         <span class="intro__name">Nocturne</span>
       </div>
-      <p class="intro__sub">a quiet place to listen</p>
+      <p class="intro__sub">deep space · a quiet place to listen</p>
       <button id="enterBtn" class="btn btn--primary" type="button">
         <span>Enter the space</span>
       </button>
@@ -28,27 +28,22 @@
   <!-- Канвас сцены -->
   <canvas id="scene" class="scene" aria-hidden="true"></canvas>
 
-  <!-- Верхняя панель: имя проекта + режим -->
+  <!-- Верхняя панель -->
   <header class="topbar" id="topbar" aria-hidden="true">
     <div class="topbar__left">
       <span class="brand__dot"></span>
       <span class="brand__name">Nocturne</span>
     </div>
     <div class="topbar__right">
-      <button class="modes" id="modeBtn" type="button" aria-haspopup="listbox" aria-expanded="false" title="Режим пространства">
-        <span class="modes__icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
-            <circle cx="12" cy="12" r="3"></circle>
-            <path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6l1.4 1.4M17 17l1.4 1.4M5.6 18.4l1.4-1.4M17 7l1.4-1.4"></path>
+      <span class="spaceTag">
+        <span class="spaceTag__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="4"></circle>
+            <ellipse cx="12" cy="12" rx="10" ry="3.2" transform="rotate(-20 12 12)"></ellipse>
           </svg>
         </span>
-        <span class="modes__label" id="modeLabel">Midnight City</span>
-      </button>
-      <ul class="modes__menu" id="modeMenu" role="listbox" hidden>
-        <li role="option" data-mode="city">Midnight City</li>
-        <li role="option" data-mode="space">Deep Space</li>
-        <li role="option" data-mode="dream">Dreamscape</li>
-      </ul>
+        <span>Deep Space</span>
+      </span>
     </div>
   </header>
 
@@ -105,7 +100,7 @@
       </div>
 
       <div class="player__side player__side--center">
-        <button class="iconbtn" id="prevBtn" type="button" title="Предыдущий (←)">
+        <button class="iconbtn" id="prevBtn" type="button" title="Предыдущий (Shift+←)">
           <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
             <path d="M19 5v14L8 12z"></path>
             <path d="M5 5v14"></path>
@@ -119,7 +114,7 @@
             <path d="M7 5h4v14H7zM13 5h4v14h-4z"></path>
           </svg>
         </button>
-        <button class="iconbtn" id="nextBtn" type="button" title="Следующий (→)">
+        <button class="iconbtn" id="nextBtn" type="button" title="Следующий (Shift+→)">
           <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
             <path d="M5 5v14l11-7z"></path>
             <path d="M19 5v14"></path>
@@ -184,10 +179,8 @@
   <!-- Тосты / ошибки -->
   <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
 
-  <!-- Three.js: попытка через CDN с fallback -->
+  <!-- Three.js: CDN с fallback -->
   <script>
-    // eslint-disable-next-line
-    window.__NOCTURNE_CDN__ = 'https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js';
     window.__NOCTURNE_CDN_FALLBACK__ = 'https://unpkg.com/three@0.160.0/build/three.min.js';
   </script>
   <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"
